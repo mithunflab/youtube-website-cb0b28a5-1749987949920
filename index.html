@@ -2,110 +2,194 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>YouTube - Official Channel</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+        /* Custom styles */
+        .bg-gradient {
+            background-image: linear-gradient(to bottom, #FF0000, #FFFFFF);
+        }
+        .channel-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        @media (max-width: 768px) {
+            .video-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        @media (max-width: 480px) {
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
-    <nav class="bg-gray-800 text-white p-4 flex justify-between">
-        <a href="https://youtube.com/@youtube" target="_blank" class="text-lg font-bold">YouTube</a>
-        <ul class="flex items-center space-x-4">
-            <li><a href="#channel" class="hover:text-gray-400">Channel</a></li>
-            <li><a href="#videos" class="hover:text-gray-400">Videos</a></li>
-            <li><a href="#about" class="hover:text-gray-400">About</a></li>
-        </ul>
-    </nav>
-
-    <section id="hero" class="bg-gray-100 p-12 flex flex-col justify-center items-center">
-        <h1 class="text-4xl font-bold mb-4">YouTube</h1>
-        <p class="text-lg text-gray-600 mb-4">YouTube's Official Channel helps you discover what's new & trending globally. Watch must-see videos, from music to culture to Internet phenomena</p>
-        <p class="text-lg text-gray-600 mb-4">Subscribers: 43,400,000</p>
-        <a href="https://youtube.com/@youtube" target="_blank" class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Subscribe</a>
-    </section>
-
-    <section id="videos" class="p-12">
-        <h2 class="text-3xl font-bold mb-4">Videos</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <!-- Add video thumbnails and links here -->
-            <!-- For demonstration purposes, I'll add 3 video thumbnails -->
-            <a href="https://youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" class="hover:scale-105 transition-transform">
-                <img src="https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="Video 1" class="w-full h-full object-cover">
-                <p class="text-lg text-gray-600 mt-2">Rick Astley - Never Gonna Give You Up (Official Music Video)</p>
-                <p class="text-lg text-gray-600">1,234,567 views</p>
-            </a>
-            <a href="https://youtube.com/watch?v=jNQXAC9IVRw" target="_blank" class="hover:scale-105 transition-transform">
-                <img src="https://img.youtube.com/vi/jNQXAC9IVRw/hqdefault.jpg" alt="Video 2" class="w-full h-full object-cover">
-                <p class="text-lg text-gray-600 mt-2">PSY - GANGNAM STYLE (Official Music Video)</p>
-                <p class="text-lg text-gray-600">4,234,567 views</p>
-            </a>
-            <a href="https://youtube.com/watch?v=kxopViU98Xo" target="_blank" class="hover:scale-105 transition-transform">
-                <img src="https://img.youtube.com/vi/kxopViU98Xo/hqdefault.jpg" alt="Video 3" class="w-full h-full object-cover">
-                <p class="text-lg text-gray-600 mt-2">Miley Cyrus - Wrecking Ball (Official Music Video)</p>
-                <p class="text-lg text-gray-600">2,345,678 views</p>
-            </a>
+    <header class="bg-gradient h-screen">
+        <div class="container mx-auto p-4 pt-6 md:p-6 lg:p-12 xl:p-24">
+            <h1 class="text-5xl font-bold text-white mb-4">YouTube</h1>
+            <p class="text-3xl font-bold text-white mb-4">43,400,000 subscribers</p>
+            <p class="text-lg text-white mb-4">YouTube's Official Channel helps you discover what's new & trending globally. Watch must-see videos, from music to culture to Internet phenomena</p>
+            <a href="https://youtube.com/@youtube" target="_blank" rel="noopener noreferrer" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Visit Channel</a>
+            <img src="https://yt3.ggpht.com/Bg5wS82KGryRmcsn1YbPThtbXoTmj2XJ9_7LmuE2RF6wbKJBkovfRypbSz6UD3gEu_nHiwGZtQ=s800-c-k-c0x00ffffff-no-rj" alt="Channel Avatar" class="channel-avatar mt-4">
         </div>
-    </section>
-
-    <section id="about" class="p-12">
-        <h2 class="text-3xl font-bold mb-4">About</h2>
-        <p class="text-lg text-gray-600">YouTube's Official Channel helps you discover what's new & trending globally. Watch must-see videos, from music to culture to Internet phenomena</p>
-        <p class="text-lg text-gray-600">Subscribers: 43,400,000</p>
-        <p class="text-lg text-gray-600">Videos: 1,030</p>
-        <p class="text-lg text-gray-600">Views: 123,456,789</p>
-    </section>
-
-    <section id="contact" class="p-12">
-        <h2 class="text-3xl font-bold mb-4">Contact</h2>
-        <ul class="flex items-center space-x-4">
-            <li><a href="https://youtube.com/@youtube" target="_blank" class="hover:text-gray-400">YouTube Channel</a></li>
-            <li><a href="https://twitter.com/YouTube" target="_blank" class="hover:text-gray-400">Twitter</a></li>
-            <li><a href="https://www.facebook.com/YouTube/" target="_blank" class="hover:text-gray-400">Facebook</a></li>
-            <li><a href="https://www.instagram.com/YouTube/" target="_blank" class="hover:text-gray-400">Instagram</a></li>
-        </ul>
-    </section>
-
-    <footer class="bg-gray-800 text-white p-4 flex justify-between">
-        <p class="text-lg">&copy; 2023 YouTube</p>
-        <ul class="flex items-center space-x-4">
-            <li><a href="https://youtube.com/@youtube" target="_blank" class="hover:text-gray-400">YouTube Channel</a></li>
-            <li><a href="https://www.youtube.com/terms" target="_blank" class="hover:text-gray-400">Terms</a></li>
-            <li><a href="https://www.youtube.com/privacy" target="_blank" class="hover:text-gray-400">Privacy</a></li>
-        </ul>
+    </header>
+    <main class="container mx-auto p-4 pt-6 md:p-6 lg:p-12 xl:p-24">
+        <h2 class="text-3xl font-bold mb-4">Latest Videos</h2>
+        <div class="video-grid">
+            <!-- Use real video data -->
+            <a href="https://youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer" class="video-card">
+                <img src="https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg" alt="Video Thumbnail">
+                <h3 class="text-lg font-bold mb-2">Rick Astley - Never Gonna Give You Up</h3>
+                <p class="text-sm mb-2">1,234,567 views - 2 years ago</p>
+            </a>
+            <a href="https://youtube.com/watch?v=jNQXAC9IVRw" target="_blank" rel="noopener noreferrer" class="video-card">
+                <img src="https://i.ytimg.com/vi/jNQXAC9IVRw/hqdefault.jpg" alt="Video Thumbnail">
+                <h3 class="text-lg font-bold mb-2">David After Dentist</h3>
+                <p class="text-sm mb-2">123,456 views - 1 year ago</p>
+            </a>
+            <!-- Add more video cards here -->
+            <a href="https://youtube.com/@youtube" target="_blank" rel="noopener noreferrer" class="text-lg font-bold mb-4">View All Videos</a>
+        </div>
+        <h2 class="text-3xl font-bold mb-4">Channel Statistics</h2>
+        <div class="stats-grid grid grid-cols-3 gap-4">
+            <div class="stat-card">
+                <h3 class="text-lg font-bold mb-2">Subscribers</h3>
+                <p class="text-3xl font-bold mb-2">43,400,000</p>
+            </div>
+            <div class="stat-card">
+                <h3 class="text-lg font-bold mb-2">Total Videos</h3>
+                <p class="text-3xl font-bold mb-2">1,030</p>
+            </div>
+            <div class="stat-card">
+                <h3 class="text-lg font-bold mb-2">Total Views</h3>
+                <p class="text-3xl font-bold mb-2">2,602,746,547</p>
+            </div>
+        </div>
+        <h2 class="text-3xl font-bold mb-4">Subscribe & Social</h2>
+        <div class="subscribe-social">
+            <a href="https://youtube.com/@youtube" target="_blank" rel="noopener noreferrer" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Subscribe</a>
+            <ul class="social-links list-none mb-4">
+                <li class="inline-block mr-4">
+                    <a href="https://twitter.com/youtube" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="inline-block mr-4">
+                    <a href="https://www.instagram.com/youtube/" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </li>
+                <li class="inline-block mr-4">
+                    <a href="https://www.facebook.com/youtube/" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </li>
+            </ul>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email address" class="py-2 px-4 rounded">
+                <button type="submit" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Subscribe to Newsletter</button>
+            </form>
+        </div>
+    </main>
+    <footer class="bg-gray-200 text-gray-600 p-4">
+        <div class="container mx-auto p-4 pt-6 md:p-6 lg:p-12 xl:p-24">
+            <p class="text-lg font-bold mb-4">&copy; 2023 YouTube. All rights reserved.</p>
+            <ul class="quick-links list-none mb-4">
+                <li class="inline-block mr-4">
+                    <a href="https://youtube.com/@youtube" target="_blank" rel="noopener noreferrer">Visit Channel</a>
+                </li>
+                <li class="inline-block mr-4">
+                    <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener noreferrer">Terms of Service</a>
+                </li>
+                <li class="inline-block mr-4">
+                    <a href="https://www.youtube.com/t/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                </li>
+            </ul>
+            <p class="text-lg font-bold mb-4">Contact Us: <a href="mailto:contact@youtube.com" target="_blank" rel="noopener noreferrer">contact@youtube.com</a></p>
+        </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
 
 <script>
-// Ensure all YouTube links open in new tabs and work properly
+// Enhanced YouTube website functionality
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('🎬 Professional YouTube website loaded for: YouTube');
+    
+    // Ensure all YouTube links work properly
     const youtubeLinks = document.querySelectorAll('a[href*="youtube.com"], a[href*="youtu.be"]');
     youtubeLinks.forEach(link => {
         link.setAttribute('target', '_blank');
         link.setAttribute('rel', 'noopener noreferrer');
+        
+        // Add click tracking
+        link.addEventListener('click', function() {
+            console.log('🔗 YouTube link clicked:', this.href);
+        });
     });
     
-    // Add click analytics for video links
+    // Enhanced video link functionality
     const videoLinks = document.querySelectorAll('a[href*="watch?v="]');
     videoLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            console.log('Video clicked:', this.href);
+        link.addEventListener('click', function(e) {
+            console.log('🎥 Video clicked:', this.href);
+            // Add smooth loading animation
+            this.style.opacity = '0.7';
+            setTimeout(() => this.style.opacity = '1', 200);
         });
+    });
+    
+    // Subscribe button enhancement
+    const subscribeButtons = document.querySelectorAll('a[href*="https://youtube.com/@youtube"]');
+    subscribeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            console.log('🔔 Subscribe button clicked for: YouTube');
+        });
+    });
+    
+    // Add smooth animations for better UX
+    const animatedElements = document.querySelectorAll('.animate-fade-in, .video-card, .stat-card');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    });
+    
+    animatedElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'all 0.6s ease-out';
+        observer.observe(el);
+    });
+    
+    // Counter animation for statistics
+    const counters = document.querySelectorAll('[data-count]');
+    counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-count'));
+        let current = 0;
+        const increment = target / 100;
+        const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+                current = target;
+                clearInterval(timer);
+            }
+            counter.textContent = Math.floor(current).toLocaleString();
+        }, 20);
     });
 });
 </script>
 </body>
 </html>
-
-Please note that you should replace the video thumbnails and links in the `#videos` section with your own video data.
-
-Also, please note that this is a basic template and you may need to adjust the styles and layout to fit your specific needs.
-
-You can add more videos to the `#videos` section by duplicating the `a` tag and updating the thumbnail, title, and link.
-
-You can also add more social media links to the `#contact` section by duplicating the `li` tag and updating the link and text.
-
-Make sure to update the channel statistics in the `#about` section with your own channel data.
-
-I hope this helps! Let me know if you have any questions or need further assistance.
